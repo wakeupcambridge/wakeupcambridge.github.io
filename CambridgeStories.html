@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cambridge, Neighborhood by Neighborhood — Wake Up Cambridge</title>
+<meta name="description" content="The historic story, character and 'vibe' of each of Cambridge's 13 neighborhoods — plus a library of every active development filing and its published plans." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#ffffff;--bg-2:#ffffff;--card:#ffffff;--card-2:#fbfbf9;--line:#e9e7df;--line-strong:#d6d3c8;--ink:#191914;--ink-2:#4e4e47;--ink-3:#8c8b80;--green:#0e7a4b;--green-deep:#0a5a38;--green-soft:#eef3ec;--lime:#e7eee2;--lime-ink:#191914;--amber:#9a7b31;--coral:#b23f2c;--coral-soft:#f7ece8;--sky:#eef1f1;--grad-hero:#ffffff;--shadow-1:0 1px 2px rgba(20,20,15,.04),0 10px 30px rgba(20,20,15,.05);--shadow-2:0 2px 8px rgba(20,20,15,.05),0 24px 60px rgba(20,20,15,.08);--r:4px;--r-sm:3px;--max:1200px;--ease:cubic-bezier(.22,1,.36,1);--serif:'Fraunces',Georgia,serif}
+[data-theme=dark]{--bg:#141310;--bg-2:#181713;--card:#1b1a15;--card-2:#201e18;--line:#2a2822;--line-strong:#3a372e;--ink:#ecebe3;--ink-2:#b9b8ac;--ink-3:#84837a;--green:#4fae7f;--green-deep:#3c9a6c;--green-soft:#1b2a20;--lime:#24312a;--lime-ink:#ecebe3;--amber:#c8a557;--coral:#cd6a52;--coral-soft:#33201a;--sky:#20262a;--grad-hero:#141310;--shadow-1:0 1px 2px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.35);--shadow-2:0 2px 8px rgba(0,0,0,.4),0 24px 60px rgba(0,0,0,.5)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;transition:background .4s,color .4s;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.06;letter-spacing:-.015em;font-weight:520}
+img{max-width:100%;display:block}a{color:var(--green-deep);text-decoration:none}button{font-family:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}section{padding:120px 0;position:relative}
+.section-head{max-width:760px;margin-bottom:52px}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-3);margin-bottom:22px}
+.kicker::before{content:"";width:30px;height:1px;background:var(--green)}
+.section-title{font-size:clamp(30px,4.4vw,52px);margin-bottom:18px}
+.section-lede{font-family:var(--serif);font-style:italic;font-size:19.5px;color:var(--ink-2);line-height:1.55}.alt{background:var(--bg-2);border-block:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:2px;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-1)}
+.btn-primary{background:var(--ink);color:var(--bg)}.btn-primary:hover{background:var(--green-deep);color:#fff}
+.btn-outline{border-color:var(--line-strong);color:var(--ink);background:transparent}.btn-outline:hover{border-color:var(--ink)}
+.nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink)}
+.logo-mark{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;flex:0 0 auto}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links>a{color:var(--ink-2);font-size:14px;font-weight:600}
+.nav-links>a:hover{color:var(--ink)}
+.theme-btn{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line-strong);background:transparent;color:var(--ink);cursor:pointer;font-size:15px}
+@media(max-width:880px){.nav-links>a.hidemob{display:none}}
+/* hero */
+.hero{padding:104px 0 80px;background:var(--bg)}
+.hero h1{font-size:clamp(38px,6vw,72px);max-width:900px;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--green-deep)}
+.hero p{font-size:19px;color:var(--ink-2);max-width:680px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-size:12px;font-weight:600;letter-spacing:.04em;padding:8px 15px;border-radius:2px;background:var(--card);border:1px solid var(--line-strong);color:var(--ink-2)}
+/* values */
+.values-card{background:var(--card);border:1.5px solid var(--line-strong);border-radius:var(--r);padding:40px 44px;box-shadow:var(--shadow-2);position:relative;max-width:860px}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:transparent;color:var(--coral);border:1px solid var(--coral);padding:5px 12px;border-radius:2px;margin-bottom:20px}
+.values-card h3{font-size:clamp(22px,3vw,30px);margin-bottom:16px}
+.values-card p{color:var(--ink-2);margin-bottom:14px}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
+.value-item{background:var(--card-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:18px 20px}
+.value-item .vi-title{font-weight:800;font-size:15px;margin-bottom:6px;display:flex;gap:8px;align-items:center}
+.value-item .vi-title span{color:var(--green-deep)}
+.value-item p{font-size:14px;color:var(--ink-2);margin:0}
+/* vibes strip */
+.strip-outer{overflow-x:auto;padding-bottom:14px;scrollbar-width:thin}
+.strip{display:flex;gap:16px;min-width:max-content;padding:4px}
+.strip-card{width:250px;flex:0 0 auto;border-radius:var(--r-sm);overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-1)}
+.strip-card .ph{height:160px;overflow:hidden;background:linear-gradient(135deg,var(--green-soft),var(--sky))}
+.strip-card img{width:100%;height:160px;object-fit:cover;transition:transform .5s var(--ease)}
+.strip-card:hover img{transform:scale(1.05)}
+.strip-card .cap{padding:12px 14px}
+.strip-card .cap b{font-size:14px;display:block}
+.strip-card .cap span{font-size:12px;color:var(--ink-3)}
+/* neighborhood cards */
+.hood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px}
+.hood{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-1);display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.hood:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+.hood .ph{height:190px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--green-soft),var(--sky))}
+.hood img{width:100%;height:190px;object-fit:cover}
+.hood .era{position:absolute;top:12px;left:12px;background:rgba(12,12,9,.82);color:#fff;font-size:10.5px;font-weight:800;padding:5px 11px;border-radius:2px;letter-spacing:.1em;text-transform:uppercase}
+.hood .body{padding:22px 24px 20px;display:flex;flex-direction:column;flex:1}
+.hood h3{font-size:20px;margin-bottom:4px}
+.hood .vibe{font-family:var(--serif);font-style:italic;font-size:14.5px;font-weight:400;color:var(--green-deep);margin-bottom:12px}
+.hood p{font-size:14.5px;color:var(--ink-2);flex:1}
+.hood .credit{font-size:11px;color:var(--ink-3);margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+/* plans library */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.fbtn{padding:9px 17px;border-radius:2px;border:1px solid var(--line-strong);background:transparent;color:var(--ink-2);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;cursor:pointer}
+.fbtn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.plans{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:20px 22px;display:flex;flex-direction:column;gap:8px;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.plan:hover{transform:translateY(-3px);box-shadow:var(--shadow-1)}
+.plan .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.plan .case{font-family:var(--serif);font-weight:700;font-size:13.5px;color:var(--ink-3);letter-spacing:.05em}
+.status{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.st-review{background:var(--coral-soft);color:var(--coral)}
+.st-dev{background:var(--green-soft);color:var(--green-deep)}
+.st-granted{background:var(--sky);color:#20647a}[data-theme=dark] .st-granted{color:#7fc7e0}
+.plan h4{font-size:16.5px;line-height:1.3}
+.plan .meta{font-size:12.5px;color:var(--ink-3)}
+.plan a.filing{margin-top:auto;font-size:13.5px;font-weight:700;display:inline-flex;gap:6px;align-items:center}
+.plan a.filing:hover{text-decoration:underline}
+.hearing-flag{background:var(--coral);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:2px;letter-spacing:.1em;text-transform:uppercase}
+.note{font-size:13px;color:var(--ink-3);max-width:760px;margin-top:30px;border-left:3px solid var(--line-strong);padding-left:16px}
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 60px;background:var(--bg-2)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+footer p{font-size:13.5px;color:var(--ink-3)}
+footer a{font-weight:600}
+
+/* ——— full-story overlay ——— */
+.hood[data-i]{cursor:pointer}
+.hood .fs{display:inline-block;margin-top:12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-deep)}
+.hood-ov{position:fixed;inset:0;z-index:300;background:var(--bg);overflow-y:auto;display:none}
+.hood-ov.open{display:block}
+.ho-close{position:fixed;top:20px;right:24px;z-index:310;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer;display:grid;place-items:center}
+.ho-close:hover{border-color:var(--ink)}
+.ho-wrap{max-width:840px;margin:0 auto;padding:80px 24px 110px}
+.ho-era{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
+.ho-era::before{content:"";width:30px;height:1px;background:var(--green)}
+.ho-wrap h1{font-size:clamp(34px,5vw,54px);margin-bottom:10px}
+.ho-vibe{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--green-deep);margin-bottom:30px}
+.ho-hero{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:8px}
+.ho-hero img{width:100%;max-height:460px;object-fit:cover;display:block}
+.ho-cap{font-size:11px;letter-spacing:.05em;color:var(--ink-3);margin-bottom:28px}
+.ho-body p{font-size:16px;color:var(--ink-2);line-height:1.7;margin-bottom:16px}
+.ho-body strong{color:var(--ink)}
+.ho-pics{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0 6px}
+.ho-pics figure{margin:0}
+.ho-pics .pf{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;height:220px}
+.ho-pics img{width:100%;height:100%;object-fit:cover}
+.ho-pics figcaption{font-size:11.5px;color:var(--ink-3);margin-top:8px;letter-spacing:.03em}
+@media (max-width:640px){.ho-pics{grid-template-columns:1fr}}
+.ho-sv{margin-top:36px}
+.ho-sv h2{font-size:22px;margin-bottom:6px}
+.ho-sv .svnote{font-size:13px;color:var(--ink-3);margin-bottom:14px}
+.ho-sv .svbox{border:1px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.ho-sv iframe{width:100%;height:56vh;min-height:340px;border:0;display:block;background:var(--bg-2)}
+.ho-src{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink-3)}
+
+.plan .psum{font-size:12.5px;color:var(--ink-2);line-height:1.5;margin:2px 0 4px}
+
+.hood:nth-child(3n+1) .ph,.hood:nth-child(3n+1) img{height:230px}
+.hood:nth-child(5n+2) .ph,.hood:nth-child(5n+2) img{height:170px}
+
+/* ——— document room ——— */
+.doc-ov{position:fixed;inset:0;z-index:400;background:var(--bg);display:none;flex-direction:column}
+.doc-ov.open{display:flex}
+.doc-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 24px;border-bottom:1px solid var(--line)}
+.doc-bar .dt{font-family:var(--serif);font-size:17.5px;font-weight:560}
+.doc-bar .da{display:flex;gap:18px;align-items:center}
+.doc-bar .da a{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-deep)}
+.doc-close{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-strong);background:transparent;color:var(--ink);cursor:pointer;font-size:15px}
+.doc-close:hover{border-color:var(--ink)}
+.doc-frame{flex:1;position:relative;background:#3f3f3d}
+.doc-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.doc-load{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#e8e6df;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:#3f3f3d;transition:opacity .5s;padding:20px}
+.doc-load.hide{opacity:0;pointer-events:none}
+.doc-open{cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap nav-inner">
+  <a class="logo" href="WakeUpCambridge.html"><span class="logo-mark" aria-hidden="true"></span> Wake Up Cambridge</a>
+  <div class="nav-links">
+    <a href="#values" class="hidemob">Where We Stand</a>
+    <a href="#vibes" class="hidemob">The Vibes</a>
+    <a href="#neighborhoods">Neighborhoods</a>
+    <a href="#plans">Plans Library</a>
+    <a href="CambridgeSites.html">Where We&rsquo;d Build</a>
+    <a href="CambridgeAtlas.html" class="hidemob">The Atlas</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Cambridge, Neighborhood by Neighborhood</div>
+  <h1 class="reveal">Thirteen neighborhoods.<br/>One <em>Cambridge</em>.</h1>
+  <p class="reveal">From the buzz of Central Square to the quiet streets of Strawberry Hill — every part of this city was built by a different wave of people, for a different reason, in a different century. Knowing those stories is how you plan a fourteenth chapter that still feels like Cambridge.</p>
+  <div class="chips reveal">
+    <span class="chip">Est. 1630 · city 1846</span>
+    <span class="chip">121,203 residents (ACS 2024)</span>
+    <span class="chip">13 official neighborhoods</span>
+    <span class="chip">6.39 square miles</span>
+  </div>
+</div></header>
+
+<section id="values"><div class="wrap">
+  <div class="section-head">
+    <div class="kicker">What We Value</div>
+    <h2 class="section-title">Pro-housing. Pro-neighborhood. On purpose.</h2>
+    <p class="section-lede">Most of this site is referee's-voice data. This section is not — it is our position, clearly labeled, so you can weigh it as one voice among many.</p>
+  </div>
+  <div class="values-card reveal">
+    <span class="badge">Where we stand · CCC / Wake Up Cambridge perspective</span>
+    <h3>More homes — about 14,000 of them — built the smart way.</h3>
+    <p>We support more housing — actively, not grudgingly: on the order of 14,000 new homes by 2030, as real homes for every kind of household. Studios and one-bedrooms for singles and seniors; two-, three- and four-bedroom homes so families with children can stay; integrated, multigenerational buildings at every price point — not one product repeated 14,000 times.</p>
+    <p>Being thoughtful means three questions, asked every time. <strong>Where</strong> we develop: parking lots, underused commercial strips and transit corridors before occupied homes and tree-lined blocks. <strong>How</strong> we develop: with design standards, tree protection, graduated transitions, and real community space designed into large projects. <strong>What</strong> we develop: the mix of homes a whole city needs — because a process that is only a pipeline from land to dollar bills builds none of it.</p>
+    <div class="values-grid">
+      <div class="value-item"><div class="vi-title"><span>WHERE</span> Build where it's underbuilt</div><p>Parking lots, vacant parcels and transit corridors first — the Atlas maps exactly where they are.</p></div>
+      <div class="value-item"><div class="vi-title"><span>HOW</span> Keep Cambridge cohesive</div><p>Design standards, tree protection, graduated transitions, and civic space built into large projects.</p></div>
+      <div class="value-item"><div class="vi-title"><span>WHAT</span> The full mix of homes</div><p>Studios to four-bedrooms, mixed-use and mixed-income — integrative, multidimensional housing.</p></div>
+      <div class="value-item"><div class="vi-title"><span>FOR WHOM</span> Children, families, seniors</div><p>Judge every project by who can actually live there — new neighbors and the ones already home.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="vibes" class="alt"><div class="wrap">
+  <div class="section-head">
+    <div class="kicker">The Vibes</div>
+    <h2 class="section-title">Every square hums at a different frequency</h2>
+    <p class="section-lede">Scroll the strip. All photos are openly licensed from Wikimedia Commons, credited on each card below.</p>
+  </div>
+  <div class="strip-outer reveal"><div class="strip" id="vibesStrip"></div></div>
+</div></section>
+
+<section id="neighborhoods"><div class="wrap">
+  <div class="section-head">
+    <div class="kicker">The Thirteen</div>
+    <h2 class="section-title">The historic story of every neighborhood</h2>
+    <p class="section-lede">When it was built, who built it, and what it feels like today. Click any neighborhood for the full story — more history, more photographs, and a live street-level view so you can stand on the block yourself.</p>
+  </div>
+  <div class="hood-grid" id="hoodGrid"></div>
+  <p class="note">Neighborhood boundaries follow the City of Cambridge's official 13 planning neighborhoods. Photos: Wikimedia Commons, individually credited with license on each card. Historical summaries are community-compiled and pending review by the Cambridge Historical Commission's published inventories — corrections welcome.</p>
+</div></section>
+
+<section id="plans" class="alt"><div class="wrap">
+  <div class="section-head">
+    <div class="kicker">Plans Library</div>
+    <h2 class="section-title">Every active filing, and its published plans</h2>
+    <p class="section-lede">These are the large projects currently in Cambridge's Planning Board pipeline (city special-permit docket, July 2026). Each filing page holds the developer's own published documents — site plans, elevations, renderings, traffic studies and decisions — all public record.</p>
+  </div>
+  <div class="filter-row reveal" id="filterRow">
+    <button class="fbtn on" data-f="all">All</button>
+    <button class="fbtn" data-f="review">Under review</button>
+    <button class="fbtn" data-f="dev">In development</button>
+    <button class="fbtn" data-f="granted">Recently granted</button>
+  </div>
+  <div class="plans" id="plansGrid"></div>
+  <p class="note">Source: cambridgema.gov/specialpermits (retrieved July 19, 2026). Statuses and meeting dates are as posted by the Community Development Department; always confirm hearing dates on the city calendar. "Under review" cases are the ones where public comment can still shape the outcome. Filings open right on this page, streamed from cambridgema.gov. Project summaries are compiled from the applicants’ own filed documents and the city Development Log.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <p><b>Wake Up Cambridge</b> · a project of the Cambridge Citizens Coalition · <a href="WakeUpCambridge.html">Home</a> · <a href="CambridgeSites.html">Where We&rsquo;d Build</a> · <a href="CambridgeAtlas.html">The Atlas</a> · <a href="CambridgeShadowStudio.html">3D Shadows</a> · <a href="CambridgeOpenSpace2026.html">Open Space 2026</a></p>
+  <p>Photos: Wikimedia Commons contributors, licenses as credited. Histories pending local-historian review.</p>
+</div></footer>
+
+<script>
+const C='https://upload.wikimedia.org/wikipedia/commons/';
+
+/* ---------- 13 neighborhoods ---------- */
+const HOODS=[
+{n:'East Cambridge',era:'Built out 1810s–1870s',vibe:'Row-house grid meets glass towers',
+ img:C+'thumb/d/db/East_Cambridge_Historical_District.jpg/960px-East_Cambridge_Historical_District.jpg',lic:'CC BY-SA 3.0',by:'Wikimedia Commons',
+ t:"Cambridge's first industrial quarter. Andrew Craigie's Canal Bridge (1809) and his Lechmere Point land syndicate pulled the county courthouse here in 1814, and the New England Glass Company (1818) made it a world center of glassmaking. Irish, then Portuguese and Polish families filled its tight worker-row blocks. Two centuries later the courts have moved out and Cambridge Crossing has risen on the rail yards — but the 1820s grid survives almost intact."},
+{n:'MIT / Area 2 · Kendall',era:'Filled marsh · MIT 1916',vibe:'The most innovative square mile on earth',
+ img:C+'thumb/d/d3/Community_Ice_Skating_at_Kendall_Square_-_Cambridge%2C_MA_-_DSC05545.JPG/960px-Community_Ice_Skating_at_Kendall_Square_-_Cambridge%2C_MA_-_DSC05545.JPG',lic:'CC0',by:'Daderot',
+ t:"Built on tidal marsh filled through the 1800s, this district was soap factories and rubber works until MIT crossed the river from Boston in 1916. NASA's Electronics Research Center came and went in the 1960s; then Cambridge's pioneering 1976 recombinant-DNA ordinance — the first in the nation — quietly invited the biotech industry to be born here. Kendall Square is now the densest cluster of life-science research anywhere, still negotiating what it owes the residential streets beside it."},
+{n:'Wellington-Harrington',era:'Streetcar & factory era, 1850s–1900s',vibe:'Triple-deckers, Inman eats, Portuguese heart',
+ img:C+'thumb/7/7c/Cambridge_MA_Inman_Square.jpg/960px-Cambridge_MA_Inman_Square.jpg',lic:'CC BY 3.0',by:'John Phelan',
+ t:"A dense weave of triple-deckers built for the factory and streetcar workers of the late 1800s, wedged between Inman Square and the rail line. It became — and remains — a heart of Portuguese and later Brazilian Cambridge, with the bakeries and social clubs to prove it. One of the city's most affordable footholds for generations of arrivals, which is exactly why development pressure lands hardest here."},
+{n:'The Port',era:'Area 4 · renamed The Port 2015',vibe:'The city’s cultural engine room',
+ img:C+'thumb/b/be/Clement_G._Morgan_Park%2C_Cambridge_MA.jpg/960px-Clement_G._Morgan_Park%2C_Cambridge_MA.jpg',lic:'CC BY 3.0',by:'John Phelan',
+ t:"Between Central Square and the tracks lies the historic center of Black and immigrant working-class Cambridge — jazz clubs, churches, and organizing halls on Columbia and Windsor Streets. Long labeled 'Area 4,' residents reclaimed the older name The Port in 2015. Clement G. Morgan Park honors the Black lawyer and city alderman who lived here. Rising land values around Kendall now press on the neighborhood from every side."},
+{n:'Cambridgeport',era:'Chartered port 1805',vibe:'Founding-fathers grid, riverside calm',
+ img:C+'thumb/d/d5/Cambridgeport_Saloon%2C_Cambridgeport_MA.jpg/960px-Cambridgeport_Saloon%2C_Cambridgeport_MA.jpg',lic:'CC BY-SA 3.0',by:'John Phelan',
+ t:"Laid out in 1805 to be a great shipping port — its streets still carry the names of founding fathers meant to flatter federal investors. Jefferson's 1807 Embargo killed the dream, so it industrialized instead: soap, pianos, printing along the river. The factories became lofts, the river became Magazine Beach and Memorial Drive parkland, and today its quiet grid holds some of the city's most complete 19th-century residential streetscapes."},
+{n:'Mid-Cambridge',era:'Built out 1840s–1890s',vibe:'City Hall, mansard rows, everyone’s crossroads',
+ img:C+'0/00/1667_Cambridge_Street_%28Cambridge%2C_Massachusetts%29_-_079996pv.jpg',lic:'Public domain (HABS)',by:'Library of Congress',
+ t:"The connective tissue between Harvard and Central Squares, filled in through the mid-1800s with mansard rows, Victorian singles, and the triple-deckers that still define its side streets. Richardsonian City Hall (1889) anchors its Mass Ave edge. It is the most 'average' Cambridge neighborhood in the best sense — which is why changes to citywide zoning show up here first and most visibly."},
+{n:'Riverside',era:'1800s river settlement',vibe:'Charles River edge, old roots, student tide',
+ img:C+'thumb/7/75/Weeks_Footbridge_Cambridge%2C_MA.jpg/960px-Weeks_Footbridge_Cambridge%2C_MA.jpg',lic:'Public domain',by:'Wikimedia Commons',
+ t:"Sloping from Central Square to the Charles, Riverside grew as a working river district and became one of Cambridge's oldest Black neighborhoods, centered on Western Avenue's churches. The 1890s parkland movement built Memorial Drive along its shore; the Weeks Footbridge (1927) still carries rowers' coaches and commuters. Harvard's growth has pressed against its modest streets for a century — the tension that first taught Cambridge to argue about development."},
+{n:'Baldwin (Agassiz)',era:'Streetcar suburb 1870s–1900s',vibe:'Leafy streets, science campus next door',
+ img:C+'thumb/e/ee/60_Oxford_Street_Cambridge_Massachusetts_050227.jpg/960px-60_Oxford_Street_Cambridge_Massachusetts_050227.jpg',lic:'CC BY-SA 2.0',by:'Wikimedia Commons',
+ t:"North of Harvard Yard, a Victorian streetcar suburb whose school made history: Maria Baldwin became New England's first Black woman school principal here in 1889, leading what was then the Agassiz School. In 2021 the neighborhood renamed itself for her. Today its leafy blocks absorb Harvard's science campus along Oxford Street — town and gown sharing a fence line, mostly peaceably."},
+{n:'Neighborhood Nine',era:'Avon Hill Victorians, 1860s–1900s',vibe:'Porter Square energy, Avon Hill hush',
+ img:C+'thumb/f/f9/CambridgeMA_AvonHillHD.jpg/960px-CambridgeMA_AvonHillHD.jpg',lic:'CC BY-SA 4.0',by:'Magicpiano',
+ t:"Between Mass Ave and the old West Cambridge line, this is the neighborhood of Avon Hill — a hilltop of exuberant Victorians built when the streetcar made commuting respectable. Porter Square, at its edge, was cattle-market country (the porterhouse steak is its souvenir). Radcliffe knitted it to the university world. Its historic district status now sits squarely inside the citywide upzoning debate."},
+{n:'West Cambridge',era:'Tory Row estates, 1760s',vibe:'Brattle Street grandeur, garden-cemetery calm',
+ img:C+'thumb/9/92/114_Brattle_Street_%28Cambridge%2C_Massachusetts%29.jpg/960px-114_Brattle_Street_%28Cambridge%2C_Massachusetts%29.jpg',lic:'CC0',by:'Wikimedia Commons',
+ t:"Brattle Street's 'Tory Row' mansions were the country seats of Loyalist merchants until 1775, when the Revolution emptied them — Washington headquartered in one, and Longfellow later wrote in it. Mount Auburn Cemetery (1831), America's first garden cemetery, set the template for its landscape of lawns and specimen trees. Huron Village added shops and modest houses; the whole quarter remains Cambridge's most intact architectural record."},
+{n:'North Cambridge',era:'Brickyards & railroads, 1840s–1920s',vibe:'Clay pits turned parkland, Dublin St. grit',
+ img:C+'thumb/4/46/Mayor_Danehy_Park_-_Cambridge%2C_MA_-_IMG_0202.JPG/960px-Mayor_Danehy_Park_-_Cambridge%2C_MA_-_IMG_0202.JPG',lic:'Public domain',by:'Daderot',
+ t:"Alewife's clay beds made this the city's brickyard: Irish immigrants of the 'Dublin' district and French-Canadian workers dug the pits and fired the bricks that built Boston. When the yards closed, the pits became landfill — and the landfill became Danehy Park, 50 acres of playing fields on reclaimed ground. The Red Line's 1985 arrival at Alewife opened the neighborhood's latest chapter: the quadrangle-by-quadrangle redevelopment now filling the old industrial edge."},
+{n:'Cambridge Highlands',era:'Estate & institutional edge, 1900s',vibe:'The city’s hidden pocket by Fresh Pond',
+ img:C+'8/8e/Fresh_Pond%2C_Cambridge%2C_MA_02.jpg',lic:'Public domain',by:'CaribDigita',
+ t:"A small enclave tucked between Fresh Pond and the Belmont line, cut off from the rest of the city by rail and parkway. Once part of the Rindge family's land, it grew as a quiet pocket of houses beside an institutional and industrial edge. Its defining amenity is Fresh Pond Reservation itself — the protected reservoir whose wooded perimeter loop is the neighborhood's shared backyard."},
+{n:'Strawberry Hill',era:'Built out early 1900s–1950s',vibe:'The quietest corner of Cambridge',
+ img:C+'c/c9/Fresh_Pond_Parkway%2C_Cambridge%2C_MA_01.jpg',lic:'Public domain',by:'CaribDigita',
+ t:"Cambridge's smallest and westernmost neighborhood, on the hill past Fresh Pond where the city shades into Watertown. Its modest capes, two-families and brick apartment rows went up in the early-to-mid 20th century for working families — and that's still who lives here. No squares, no towers, no nightlife: Strawberry Hill is the deliberately quiet end of the Cambridge spectrum, and its residents like it that way."}
+];
+
+/* ---------- vibes strip ---------- */
+const VIBES=[
+ {b:'Harvard Square',s:'Buskers, books, tourists — the front porch',img:C+'thumb/c/c0/Harvard_square_2009j.JPG/960px-Harvard_square_2009j.JPG',lic:'CC BY-SA 4.0'},
+ {b:'Central Square',s:'The buzz — music, murals, City Hall politics',img:C+'thumb/2/21/US_Post_Office-Central_Square_-_770_Massachusetts_Avenue%2C_Cambridge%2C_MA_-_IMG_3950.JPG/960px-US_Post_Office-Central_Square_-_770_Massachusetts_Avenue%2C_Cambridge%2C_MA_-_IMG_3950.JPG',lic:'Public domain'},
+ {b:'Inman Square',s:'Neighborhood restaurants, Portuguese roots',img:C+'thumb/7/7c/Cambridge_MA_Inman_Square.jpg/960px-Cambridge_MA_Inman_Square.jpg',lic:'CC BY 3.0 · J. Phelan'},
+ {b:'Porter Square',s:'Everyday Cambridge — groceries and the Red Line',img:C+'thumb/e/eb/Porter_square_cambridge_massachusetts.JPG/960px-Porter_square_cambridge_massachusetts.JPG',lic:'CC BY-SA 4.0'},
+ {b:'Kendall Square',s:'Labs by day, skating rink by winter',img:C+'thumb/d/d3/Community_Ice_Skating_at_Kendall_Square_-_Cambridge%2C_MA_-_DSC05545.JPG/960px-Community_Ice_Skating_at_Kendall_Square_-_Cambridge%2C_MA_-_DSC05545.JPG',lic:'CC0 · Daderot'},
+ {b:'Cambridge Common',s:'Where the Continental Army mustered, 1775',img:C+'1/1c/Civil_War_Memorial_on_Cambridge_Common%2C_Cambridge_MA%2C_USA.jpg',lic:'CC BY-SA 3.0'},
+ {b:'Brattle Street',s:'Tory Row calm under old trees',img:C+'thumb/9/92/114_Brattle_Street_%28Cambridge%2C_Massachusetts%29.jpg/960px-114_Brattle_Street_%28Cambridge%2C_Massachusetts%29.jpg',lic:'CC0'},
+ {b:'Fresh Pond',s:'The reservation loop — quiet west Cambridge',img:C+'7/7a/Fresh_Pond%2C_Cambridge%2C_MA_08.jpg',lic:'Public domain'}
+];
+
+/* ---------- plans library (city special-permit docket, scraped 7/19/2026) ---------- */
+const SP='https://www.cambridgema.gov/specialpermits/';
+const PP='https://www.cambridgema.gov/-/media/Files/CDD/ZoningDevel/specialpermitsadvisory/';
+const PDFS={
+'PB-412':PP+'sp412/sp412_presentation_20260721.pdf','PB-411':PP+'sp411/sp411_presentation_20260616.pdf',
+'PB-410':PP+'sp410/sp410_presentation_20260428.pdf',
+'PBAC-002':PP+'PlanningBoardAdvisoryConsultation/pbac001100/pbac002/pbac2_presentation_202605121.pdf',
+'PBAC-001':PP+'PlanningBoardAdvisoryConsultation/pbac001100/pbac001/pbac1_appln_vol1_20251027.pdf',
+'PB-179':PP+'sp179/sp179_design_C1_20260608.pdf','PB-364':PP+'sp364/sp364_ParkDesignRevisions_20230224.pdf',
+'PB-383':PP+'sp383/sp383_update_20251223.pdf','PB-368':PP+'sp368/designreview/sp368_C3revision_20251016.pdf',
+'PB-408':PP+'sp408/sp408_applnvol2a_20250318.pdf','PB-315':PP+'sp315/Amend3/sp315_amend3appvol2_20250919.pdf',
+'PB-386':PP+'sp386/sp386_appgraphics_20211220.pdf','PB-377':PP+'sp377/sp377_appgraphics_20210224.pdf',
+'PB-361':PP+'sp361/sp361_designupdate_20220325.pdf','PB-393':PP+'sp393/sp393_applngraphics_20230131.pdf',
+'PB-397':PP+'sp397/sp397_applngraphics_20230725.pdf','PB-231A':PP+'sp231mja2/sp231_mja1_presentation.pdf',
+'PB-398':PP+'sp398/sp398_applnvol2_20230508.pdf','PB-387':PP+'sp387/sp387_revisedgraphics1_20220408.pdf',
+'PB-303':PP+'sp302_303_mit/sp303_bldg3_design_presentation.pdf','PB-243':PP+'sp243/sp243_41linskey_design_20211027.pdf',
+'PB-409':PP+'sp409/sp409_applnvol2_20250328.pdf','PB-407':PP+'sp407/sp407_appvol2a_20250228.pdf',
+'PB-404':PP+'sp404/sp404_applnvol2_20240827.pdf','PB-390':PP+'sp390/sp390_designupdate_20230926.pdf',
+'PB-403':PP+'sp403/sp403_applnvol2_20240603.pdf'};
+const PLANS=[
+ {c:'PB-412',t:'9 & 25 Birch Street; 30–36 Bay State Road',s:'review',m:'7/21/2026',hot:true,sum:'85 units (16 affordable) · 6 stories, 69′10″ · 91,585 sq ft · 15 car + 89 bike spaces · green roof · HDS Architecture'},
+ {c:'PB-411',t:'8 Winter Street',s:'review',m:'6/16/2026',sum:'23 units · 6 stories, 63′ · zero car parking, 28 bike · passive-house envelope · 23% open space · MP Design Consultants'},
+ {c:'PB-410',t:'Alewife Quadrangle — Healthpeak PUD Master Plan',s:'review',m:'6/2/2026',sum:'≈4M sq ft master plan — 1.76M residential + 1.48M commercial · towers 32–155 ft · new Main Street + park network · Healthpeak / Elkus Manfredi'},
+ {c:'PBAC-002',t:'1740 Massachusetts Avenue',s:'review',m:'5/12/2026',sum:'71 units · 6 stories, ≈70′ · 5 ground-floor shops · no car parking, 75 bike · green roof + solar · replaces one-story commercial · Peter Quinn Architects'},
+ {c:'PBAC-001',t:'16–28 Porter Street',s:'review',m:'12/9/2025',sum:'68 units (13 affordable incl. two 3-BR) · 6 stories, 68′6″ · passive-house target · 34% open space · built on underutilized parcels · SGL Development'},
+ {c:'PB-179',t:'North Point Development',s:'dev',m:'7/14/2026'},
+ {c:'PB-364',t:'CambridgeSide PUD — 100 Cambridgeside Pl & First St',s:'dev',m:'2/24/2026'},
+ {c:'PB-383',t:'585 Third Street · 330 Third Street',s:'dev',m:'1/6/2026'},
+ {c:'PB-368',t:'MIT Volpe Redevelopment (Volpe PUD)',s:'dev',m:'10/28/2025'},
+ {c:'PB-408',t:'36–64 Whittemore Avenue (Jerry’s Pond)',s:'dev',m:'5/6/2025'},
+ {c:'PB-315',t:'MXD Infill — Broadway / Binney / Ames / Main',s:'dev',m:'—'},
+ {c:'PB-386',t:'81–93 Mount Auburn St · 36 JFK · 33 Dunster',s:'dev',m:'—'},
+ {c:'PB-377',t:'88 Holworthy Street',s:'dev',m:'5/21/2024'},
+ {c:'PB-361',t:'711–727 Massachusetts Avenue',s:'dev',m:'5/21/2024'},
+ {c:'PB-393',t:'23 Reed Street',s:'dev',m:'3/12/2024'},
+ {c:'PB-397',t:'2161 Massachusetts Avenue',s:'dev',m:'8/22/2023'},
+ {c:'PB-231A',t:'150 Second Street · First Street (multiple sites)',s:'dev',m:'7/18/2023'},
+ {c:'PB-398',t:'55 Washburn Avenue',s:'dev',m:'6/13/2023'},
+ {c:'PB-387',t:'36–64 Whittemore Avenue (Alewife Park)',s:'dev',m:'7/26/2022'},
+ {c:'PB-303',t:'MIT Kendall Square — South of Main St PUD',s:'dev',m:'—'},
+ {c:'PB-243',t:'Alexandria PUD — Binney / First / Third Streets',s:'dev',m:'—'},
+ {c:'PB-409',t:'350 Massachusetts Avenue',s:'granted',m:'5/20/2025'},
+ {c:'PB-407',t:'745 Concord Avenue',s:'granted',m:'4/15/2025'},
+ {c:'PB-404',t:'8 Thingvalla Avenue',s:'granted',m:'10/1/2024'},
+ {c:'PB-390',t:'57 JFK Street',s:'granted',m:'8/6/2024'},
+ {c:'PB-403',t:'2400 Massachusetts Avenue',s:'granted',m:'7/2/2024'}
+];
+const SLABEL={review:['Under review','st-review'],dev:['In development','st-dev'],granted:['Permit granted','st-granted']};
+const caseUrl=c=>SP+c.replace(/-/g,'').toLowerCase();
+
+/* ---------- render ---------- */
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function phFail(el){ el.onerror=null; el.style.display='none'; }
+
+document.getElementById('vibesStrip').innerHTML=VIBES.map(v=>`
+ <div class="strip-card"><div class="ph"><img src="${v.img}" alt="${esc(v.b)}" loading="lazy" onerror="phFail(this)"/></div>
+ <div class="cap"><b>${esc(v.b)}</b><span>${esc(v.s)} · ${esc(v.lic)}</span></div></div>`).join('');
+
+document.getElementById('hoodGrid').innerHTML=HOODS.map((h,i)=>`
+ <article class="hood reveal" data-i="${i}"><div class="ph"><img src="${h.img}" alt="${esc(h.n)}" loading="lazy" onerror="phFail(this)"/><span class="era">${esc(h.era)}</span></div>
+ <div class="body"><h3>${esc(h.n)}</h3><div class="vibe">${esc(h.vibe)}</div><p>${esc(h.t)}</p>
+ <span class="fs">Read the full story →</span>
+ <div class="credit">Photo: ${esc(h.by)} · ${esc(h.lic)} · via Wikimedia Commons</div></div></article>`).join('');
+
+function renderPlans(f){
+ document.getElementById('plansGrid').innerHTML=PLANS.filter(p=>f==='all'||p.s===f).map(p=>`
+  <div class="plan" data-case="${p.c}"><div class="top"><span class="case">${p.c}</span>
+   ${p.hot?'<span class="hearing-flag">HEARING JUL 21</span>':`<span class="status ${SLABEL[p.s][1]}">${SLABEL[p.s][0]}</span>`}</div>
+  <h4>${esc(p.t)}</h4>${p.sum?`<p class="psum">${p.sum}</p>`:''}<div class="meta">Latest posted meeting: ${p.m}</div>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:auto;padding-top:6px">${PDFS[p.c]?`<button class="filing doc-open" data-pdf="${PDFS[p.c]}" data-t="${p.c} — ${esc(p.t)}" style="border:0;background:none;cursor:pointer;padding:0;text-align:left">Read the filing here</button><a class="filing" style="margin:0" href="${PDFS[p.c]}" target="_blank" rel="noopener" title="Open in a new tab">↗</a>`:''}<a class="filing" style="margin:0" href="${caseUrl(p.c)}" target="_blank" rel="noopener">All documents →</a></div></div>`).join('');
+ }
+renderPlans('all');
+(async()=>{try{
+  const rows=await fetch('https://data.cambridgema.gov/resource/wjwg-93qh.json?$limit=800').then(r=>r.json());
+  const byCase={};
+  rows.forEach(r=>{const pb=(r.planning_board_special_permit||'').toString().toLowerCase().replace(/[^a-z0-9]/g,'');if(pb)byCase[pb]=r;});
+  const pick=(r,ks)=>{for(const k of ks){if(r[k]&&r[k]!=='0')return r[k];}return null;};
+  document.querySelectorAll('.plan[data-case]').forEach(el=>{
+    const r=byCase[el.dataset.case.toLowerCase().replace(/[^a-z0-9]/g,'')]; if(!r) return;
+    const units=pick(r,['new_dwelling_units','dwelling_units','total_units','units']);
+    const gfa=pick(r,['total_gfa','gfa','gross_floor_area']);
+    const dev=pick(r,['developer','applicant','owner','developer_name']);
+    const bits=[units?units+' units':null,gfa?Number(gfa).toLocaleString()+' sq ft':null,dev].filter(Boolean);
+    if(bits.length&&!el.querySelector('.psum')){const d=document.createElement('p');d.className='psum';d.textContent=bits.join(' · ')+' — city Development Log';el.querySelector('h4').after(d);}
+  });
+}catch(e){}})();
+document.getElementById('filterRow').addEventListener('click',e=>{
+ const b=e.target.closest('.fbtn'); if(!b) return;
+ document.querySelectorAll('.fbtn').forEach(x=>x.classList.toggle('on',x===b));
+ renderPlans(b.dataset.f);
+});
+
+/* theme + reveal */
+const tb=document.getElementById('themeBtn');
+tb.onclick=()=>{const r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';};
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<div class="hood-ov" id="hoodOv" role="dialog" aria-modal="true">
+  <button class="ho-close" id="hoodClose" aria-label="Close">✕</button>
+  <div class="ho-wrap" id="hoodWrap"></div>
+</div>
+<script>
+/* ---------- full-story data: extended history, extra photos, street view ---------- */
+const SV={
+0:['TH1wHB3KZzS38UcpQL-r7A',42.3706,-71.0810,290],1:['2tWnQPknyEi1K5h4OvqH3A',42.3625,-71.0850,90],
+2:['M7sY5WDfwf7A4CO1kaPJ2Q',42.3736,-71.1010,210],3:['H1RtogQFsz_WEvXJmrAEdQ',42.3645,-71.0985,180],
+4:['Eqi2lTTLZRTiAvU00GKC_w',42.3609,-71.1055,200],5:['IAyHhi3pVwq8fMEXaDglTw',42.3720,-71.1090,250],
+6:['VJj44Ah5myqKKeqavx5hHw',42.3620,-71.1105,220],7:['88gUczb8GbTBcM8qQ2UaNQ',42.3810,-71.1155,0],
+8:['Oc3fN8nvgopg6OKqf4_Tsg',42.3855,-71.1230,180],9:['rQJhNJ54CJ1AxWPOQ63tLQ',42.3765,-71.1265,270],
+10:['jFHt8h3RjrS7IYEXnBdFBA',42.3925,-71.1330,320],11:['aATudf_MT5mmQWDTxU5DQw',42.3900,-71.1520,240],
+12:['R8rQDon022fl9NHgVtYYew',42.3800,-71.1500,270]};
+const EXT={
+0:{more:`<p>Lechmere Point was farmland and salt marsh until Andrew Craigie — apothecary general of the Continental Army turned aggressive land speculator — quietly bought up the point and built the Canal Bridge to Boston in 1809. His syndicate donated land to lure the county courthouse and jail in 1814, platted the tight grid that still exists, and East Cambridge became the city's engine room: the New England Glass Company's furnaces made it world-famous, and by mid-century furniture works, soap makers and meat packers lined the canals.</p>
+<p>Each industrial wave brought its people — Irish in the 1840s, then Portuguese, Polish and Italian families whose parishes and clubs still mark the blocks. The courts departed in 2008; the glassworks are museums' collections now. Cambridge Crossing has replaced the rail yards with labs and towers, making East Cambridge the sharpest of contrasts: an 1820s row-house grid in the shadow of the city's newest skyline.</p>`,
+pics:[['thumb/3/38/Mug%2C_New_England_Glass_Company_%28United_States%2C_Massachusetts%2C_East_Cambridge%2C_1818-1888%29_LACMA_56.35.102.jpg/960px-Mug%2C_New_England_Glass_Company_%28United_States%2C_Massachusetts%2C_East_Cambridge%2C_1818-1888%29_LACMA_56.35.102.jpg','New England Glass Co. mug, made in East Cambridge, 1818–1888 · LACMA · Public domain'],
+['thumb/d/db/Aerial_view_of_downtown_Cambridge%2C_Massachusetts%2C_across_the_Charles_River_from_Boston%2C_by_Carol_M._Highsmith%2C_2019%2C_from_the_Library_of_Congress_-_master-pnp-highsm-57200-57288a.tif/lossy-page1-1280px-thumbnail.tif.jpg','Cambridge from the Charles · C. M. Highsmith, 2019 · LoC · CC0']]},
+1:{more:`<p>Almost none of this ground existed in 1790. The district was tidal flats, filled through the nineteenth century for rail yards, soap factories and rubber works. MIT arrived from Boston in 1916 — Bosworth's white dome rising over Killian Court announced that filled marsh could carry monuments. NASA's Electronics Research Center came in the 1960s, taking a neighborhood by eminent domain before politics shut it down; the Volpe Center inherited the site, and its redevelopment is now the biggest project in the city's docket.</p>
+<p>Cambridge's 1976 recombinant-DNA ordinance — the first local biotech law in America — turned out to be an invitation: companies knew exactly what the rules were, so they came. Kendall became "the most innovative square mile on earth," and its unresolved question is civic: a district that works at 6 pm but must learn to live at 9 pm, and to be a neighbor to the streets beside it.</p>`,
+pics:[['thumb/9/98/Stata_Center_and_Alumni_Pool.jpg/960px-Stata_Center_and_Alumni_Pool.jpg','Stata Center · Nickknack00 · CC BY-SA 4.0'],
+['thumb/5/54/Transportation_Systems_Center_Construction_Site_at_Kendall_Square%2C_Looking_East_-_NARA_-_6882636.jpg/960px-Transportation_Systems_Center_Construction_Site_at_Kendall_Square%2C_Looking_East_-_NARA_-_6882636.jpg','Kendall under construction, 1970s · NARA · Public domain']]},
+2:{more:`<p>Squeezed between the Grand Junction rail line and Cambridge Street, Wellington-Harrington was built fast and dense in the streetcar decades — triple-deckers and worker cottages for the families who ran the factories of East Cambridge and the Port. It has always been an arrival neighborhood: Irish, then one of New England's great Portuguese communities, later Brazilian — the bakeries, fish markets and social clubs of Cambridge Street are the visible archive.</p>
+<p>Density here predates the word: small lots, short setbacks, homes close enough to borrow sugar. That affordability is exactly what makes the neighborhood vulnerable now — modest multifamily buildings on transit-close blocks are the first thing speculation reaches for. The question the zoning debate keeps asking abstractly is concrete here: who gets to keep living in the neighborhood that working people built?</p>`,
+pics:[['e/e2/1667_Cambridge_Street_%28Cambridge%2C_Massachusetts%29_-_079997pv.jpg','Triple-decker detail, Cambridge Street · HABS · Public domain']]},
+3:{more:`<p>The Port earned its name honestly: Broad Canal barges once reached warehouses here, and its flat blocks between Central Square and the tracks filled with the workers of a manufacturing city. It became the heart of Black Cambridge — churches, jazz rooms, and the organizing tradition that produced figures like Clement G. Morgan, the Black lawyer and alderman whose name is on the park. W.E.B. Du Bois lived nearby as a student; the neighborhood's civic bench is deep.</p>
+<p>Renamed "Area 4" by planners, residents took the old name back in 2015. The Port today holds the city's starkest gradient: some of Cambridge's lowest household incomes live a ten-minute walk from some of the world's most expensive lab space, and Kendall's land values press outward through its blocks. Flood maps add a second pressure — the Port pools stormwater the sewers can't move. What happens here is the truest test of whether growth can serve the people already home.</p>`,
+pics:[['thumb/2/21/US_Post_Office-Central_Square_-_770_Massachusetts_Avenue%2C_Cambridge%2C_MA_-_IMG_3950.JPG/960px-US_Post_Office-Central_Square_-_770_Massachusetts_Avenue%2C_Cambridge%2C_MA_-_IMG_3950.JPG','Central Square post office, the Port’s front door · Public domain']]},
+4:{more:`<p>Cambridgeport was a speculation before it was a neighborhood: chartered as a port of delivery in 1805, its founders laid a grid of streets named for federal heroes — Washington, Franklin, Magazine — to flatter the investors a great harbor would need. Jefferson's 1807 Embargo strangled the scheme in its crib. So the port became a factory district instead: soap, pianos, printing presses, and the workers' housing that still sets its scale.</p>
+<p>The riverfront the founders coveted became the neighborhood's gift a century later, when the parkway movement built Memorial Drive and Magazine Beach. Today Cambridgeport is the city's clearest demonstration that density and calm can coexist — tight blocks, corner stores, and streets that end in river light. Its future question is its edges: the Central Square and Memorial Drive corridors where the next height debates will land.</p>`,
+pics:[['thumb/2/2b/Plan_of_property_in_the_Cambridgeport_marshes_%283370526274%29.jpg/960px-Plan_of_property_in_the_Cambridgeport_marshes_%283370526274%29.jpg','Plan of the Cambridgeport marshes — the port that never was · Boston Public Library · CC BY 2.0']]},
+5:{more:`<p>Mid-Cambridge is the city's connective tissue — the blocks that knit Harvard Square to Central Square, built out in the mansard-and-triple-decker decades after the horsecar arrived. Richardson's sandstone City Hall (1889) anchors its Massachusetts Avenue edge; the Main Library and Joan Lorentz Park form its living room. Nothing about it is monumental; everything about it is the reason people love Cambridge streets.</p>
+<p>That averageness is why the 2025 ordinance shows up here first and most visibly: C-1 zoning covers exactly these blocks, and the Ellery Street acquisitions made Mid-Cambridge the test case for what teardown economics do to occupied, modestly priced homes. Whatever rules Cambridge writes next, Mid-Cambridge is where they will be legible soonest — street by street, permit by permit.</p>`,
+pics:[['thumb/6/6a/Cambridge_MA_City_Hall.jpg/640px-Cambridge_MA_City_Hall.jpg','City Hall, 1889 — Richardsonian sandstone on Mass Ave · CC BY-SA 3.0']]},
+6:{more:`<p>Riverside runs from Central Square's back streets down to the Charles, and its history flows the same direction. A working river edge became one of Cambridge's oldest Black neighborhoods, gathered around the churches of Western Avenue; its cottages and triple-deckers housed laundresses, porters, masons and the first generation of Harvard's Black students who could not live in the Yard.</p>
+<p>The 1890s parks movement gave the neighborhood its riverfront — Memorial Drive's sycamores, the boathouses, the Weeks Footbridge carrying coaches' bicycles every fall regatta. Harvard's expansion has pressed on Riverside for a century, and the neighborhood has organized against it for just as long, winning downzonings and design concessions that are local legend. Riverside taught Cambridge how to argue about development; it would recognize today's debate instantly.</p>`,
+pics:[['thumb/1/1d/ROWING_CREWS_ON_THE_CHARLES_RIVER%2C_HARVARD_UNIVERSITY_AREA_CAMBRIDGE_-_NARA_-_550054.jpg/960px-ROWING_CREWS_ON_THE_CHARLES_RIVER%2C_HARVARD_UNIVERSITY_AREA_CAMBRIDGE_-_NARA_-_550054.jpg','Crews on the Charles at the Harvard bend · NARA · Public domain'],
+['thumb/f/f2/4th_of_July_2012_in_Boston_%287511442888%29.jpg/960px-4th_of_July_2012_in_Boston_%287511442888%29.jpg','Sailboats on the Charles basin · S. Dasgupta · CC BY-SA 2.0']]},
+7:{more:`<p>North of Harvard Yard, the neighborhood grew as a Victorian streetcar suburb for professors and clerks — generous frame houses on Oxford and Sacramento Streets, a short walk from the college. Its school made national history quietly: in 1889 Maria Baldwin became principal of the Agassiz School, the first Black woman to lead a school in the Northeast, serving a student body that was overwhelmingly white — and led it brilliantly for three decades.</p>
+<p>In 2021 the neighborhood chose her name over Louis Agassiz's, a rare case of a place renaming itself around its better history. Its present is defined by a negotiated coexistence: Harvard's science campus advances along Oxford Street under agreements the neighborhood fought to shape — a small model of the leverage residents can hold when institutions must ask.</p>`,
+pics:[['thumb/d/dc/Oxford_Street_Garage_entrance_Harvard_University_050227.jpg/960px-Oxford_Street_Garage_entrance_Harvard_University_050227.jpg','Harvard’s science campus meets the neighborhood, Oxford St · CC BY-SA 2.0']]},
+8:{more:`<p>Neighborhood Nine climbs from Massachusetts Avenue up Avon Hill, where the streetcar era's most exuberant Victorians — towers, porches, patterned slate — announced their owners had arrived. Radcliffe College wove the neighborhood into the university world; Porter Square, at its edge, stayed happily ordinary: the cattle market that named the porterhouse steak became the supermarket, the T stop, the everyday Cambridge of errands.</p>
+<p>The Avon Hill historic district now sits inside the upzoning debate's crosshairs — a concentration of protected fabric beside corridors slated for the city's next height push. Neighborhood Nine is where the "corridors and squares" map gets real: full height proposed on Mass Ave, three-story streets one lot behind it. How that seam is detailed — the step-downs, the setbacks — will decide whether the neighborhood reads as transition or collision.</p>`,
+pics:[['thumb/a/ae/2020_Avon_Hill_Street_Cambridge_Massachusetts_US.jpg/960px-2020_Avon_Hill_Street_Cambridge_Massachusetts_US.jpg','Avon Hill Street, 2020 · M2545 · CC BY 4.0'],
+['thumb/e/eb/Porter_square_cambridge_massachusetts.JPG/960px-Porter_square_cambridge_massachusetts.JPG','Porter Square — everyday Cambridge · CC BY-SA 4.0']]},
+9:{more:`<p>Brattle Street was "Tory Row": seven Loyalist estates whose owners fled in 1775, leaving their mansions to the Revolution — Washington ran the siege of Boston from the Vassall house, and Longfellow later wrote at its windows for half a century. Mount Auburn Cemetery (1831), America's first landscaped garden cemetery, made the neighborhood a pilgrimage site and set the template for its park-like streets.</p>
+<p>West Cambridge has been wealthy for 250 years, which makes it the debate's mirror: its estate-scale lots hold the city's lowest density and greatest zoning protection. An honest citywide plan has to say what these blocks contribute — Huron Village's small shops and the neighborhood's canopied streets are treasures, but "smart growth" arguments ring hollow if the least-dense, most-served quarter is also the most exempt. Graduated, contextual rules cut in every direction.</p>`,
+pics:[['e/ed/General_William_Brattle_House%2C_42_Brattle_Street%2C_Cambridge_%28Middlesex_County%2C_Massachusetts%29.jpg','The Gen. William Brattle House, 1727 — Tory Row · HABS · Public domain'],
+['thumb/c/cf/Longfellow_National_Historic_Site%2C_Cambridge%2C_Massachusetts.JPG/960px-Longfellow_National_Historic_Site%2C_Cambridge%2C_Massachusetts.JPG','Longfellow House — Washington’s headquarters, 1775 · CC BY-SA 3.0'],
+['thumb/7/76/Halcyon_Lake%2C_Mount_Auburn_Cemetery%2C_Watertown_MA.jpg/960px-Halcyon_Lake%2C_Mount_Auburn_Cemetery%2C_Watertown_MA.jpg','Mount Auburn Cemetery, 1831 · J. Phelan · CC BY-SA 3.0']]},
+10:{more:`<p>Alewife's clay beds made North Cambridge the brickyard of New England — pits fifty feet deep, kilns burning around the clock, and the Irish "Dublin" district and French-Canadian blocks that dug and fired it all. Porter's Hotel gave the world the porterhouse; the cattle yards gave the avenue its width. When the clay gave out, the pits became the city dump — and then, in the 1990s, the dump became Danehy Park: fifty acres of fields floating on the neighborhood's industrial memory.</p>
+<p>The Red Line's arrival at Alewife in 1985 rewrote the western edge — parking-garage urbanism now giving way, quadrangle by quadrangle, to the city's largest redevelopment area. North Cambridge is where "build where it's empty" is actually happening; Jerry's Pond and the Healthpeak master plan will test whether it happens with parks, flood sense and street life, or without them.</p>`,
+pics:[['thumb/4/41/Benjamin_Banneker_Charter_%28Cambridge%2C_Massachusetts%29.jpg/960px-Benjamin_Banneker_Charter_%28Cambridge%2C_Massachusetts%29.jpg','Benjamin Banneker Charter School · CC0'],
+['thumb/e/eb/Porter_square_cambridge_massachusetts.JPG/960px-Porter_square_cambridge_massachusetts.JPG','Porter Square, the southern gateway · CC BY-SA 4.0']]},
+11:{more:`<p>The Highlands is Cambridge's hidden pocket — a few residential streets tucked between Fresh Pond and the Belmont line, cut off from the rest of the city by rail and parkway. Once part of the Rindge family's holdings, it developed late and quietly: modest houses beside an edge of industry and, later, offices along Concord Avenue.</p>
+<p>Its great neighbor defines it. Fresh Pond Reservation — the city's drinking-water reservoir, ringed by 162 acres of woods and meadow — is the Highlands' shared backyard and the clearest local lesson in what "protected land" means: the water itself is fenced infrastructure, and it is the walking loop around it that carries the civic life. Small, quiet places are part of a city's balance too; the Highlands is Cambridge's reminder.</p>`,
+pics:[['0/0f/Fresh_Pond%2C_Cambridge%2C_MA_03.jpg','Fresh Pond Reservation woods · CaribDigita · Public domain']]},
+12:{more:`<p>Cambridge's smallest neighborhood sits on the hill west of Fresh Pond where the city tapers into Watertown — a name older than the streets, from a colonial tavern's strawberry fields. It filled in the early twentieth century with capes, two-families and brick apartment rows for tradespeople and city workers: homeownership at working-wage scale, a block from open water.</p>
+<p>No square, no tower, no nightlife — Strawberry Hill is the deliberately quiet end of the Cambridge spectrum, and its residents chose it for exactly that. A city that celebrates Central Square's noise owes equal honesty to Strawberry Hill's silence: a range of neighborhood intensities is not a bug in Cambridge, it is the design. The planning question is simply which streets are asked to change, and who decides.</p>`,
+pics:[['7/7a/Fresh_Pond%2C_Cambridge%2C_MA_08.jpg','Fresh Pond from the western shore · Public domain']]}
+};
+const hoodOv=document.getElementById('hoodOv'),hoodWrap=document.getElementById('hoodWrap');
+function openHood(i){
+  const h=HOODS[i],x=EXT[i]||{},sv=SV[i];
+  const pics=(x.pics||[]).map(p=>`<figure><div class="pf"><img src="${C+p[0]}" alt="" loading="lazy" onerror="this.closest('figure').style.display='none'"/></div><figcaption>${p[1]}</figcaption></figure>`).join('');
+  hoodWrap.innerHTML=`<span class="ho-era">${h.era}</span><h1>${h.n}</h1><p class="ho-vibe">${h.vibe}</p>
+   <div class="ho-hero"><img src="${h.img}" alt="${h.n}"/></div><p class="ho-cap">Photo: ${h.by} · ${h.lic} · Wikimedia Commons</p>
+   <div class="ho-body"><p>${h.t}</p>${x.more||''}</div>
+   ${pics?`<div class="ho-pics">${pics}</div>`:''}
+   ${sv?`<div class="ho-sv"><h2>Stand on the street</h2><p class="svnote">A live street-level view — drag to look around, click the arrows to walk the block. Imagery © Google.</p>
+   <div class="svbox"><iframe loading="lazy" title="Street-level view of ${h.n}" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!4v1710000000000!6m8!1m7!1s${sv[0]}!2m2!1d${sv[1]}!2d${sv[2]}!3f${sv[3]}!4f0!5f0.9"></iframe></div></div>`:''}
+   <p class="ho-src">History compiled from public sources — Cambridge Historical Commission surveys, city planning documents, and standard histories — and pending local-historian review. Corrections welcome. Photos: Wikimedia Commons contributors, licensed as captioned.</p>`;
+  hoodOv.classList.add('open'); hoodOv.scrollTop=0; document.body.style.overflow='hidden';
+}
+function closeHood(){ hoodOv.classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('hoodClose').addEventListener('click',closeHood);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeHood();});
+document.getElementById('hoodGrid').addEventListener('click',e=>{
+  const el=e.target.closest('.hood[data-i]'); if(el) openHood(+el.dataset.i);
+});
+</script>
+
+<div class="doc-ov" id="docOv" role="dialog" aria-modal="true">
+  <div class="doc-bar"><span class="dt" id="docTitle">Document</span>
+    <span class="da"><a id="docExt" href="#" target="_blank" rel="noopener">Original at cambridgema.gov ↗</a><button class="doc-close" id="docClose" aria-label="Close document">✕</button></span></div>
+  <div class="doc-frame"><div class="doc-load" id="docLoad">Loading the filed document<br/>city files are large — give it a moment</div><iframe id="docFrame" title="Filed development document"></iframe></div>
+</div>
+<script>
+(function(){
+  var ov=document.getElementById('docOv'),fr=document.getElementById('docFrame'),
+      ld=document.getElementById('docLoad'),tt=document.getElementById('docTitle'),ex=document.getElementById('docExt');
+  window.openDoc=function(pdf,title){
+    tt.textContent=title||'Filed document'; ex.href=pdf;
+    ld.classList.remove('hide'); fr.src=pdf;
+    ov.classList.add('open'); document.body.style.overflow='hidden';
+  };
+  fr.addEventListener('load',function(){ if(fr.src&&fr.src!=='about:blank') ld.classList.add('hide'); });
+  function close(){ ov.classList.remove('open'); fr.src='about:blank'; document.body.style.overflow=''; }
+  document.getElementById('docClose').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.doc-open'); if(!b) return;
+    e.preventDefault(); var c=b.closest('.plan-card,.plan');var h=c&&c.querySelector('h3,h4');openDoc(b.dataset.pdf,(b.dataset.t&&b.dataset.t.indexOf('Open')!==0)?b.dataset.t:(h?h.textContent.trim():'Filed document'));
+  });
+})();
+</script>
+</body>
+</html>
